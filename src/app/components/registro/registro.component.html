@@ -1,0 +1,25 @@
+<!-- Formulario de registro de cuentas-->
+<div id="login" class="card">
+    <h2><span class="fontawesome-lock"></span>Registro</h2>
+    <form action="javascript:void(0);" method="POST">
+        <fieldset>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Coreo</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="usuario@gmail.com" name="Correo" [(ngModel)]="Correo">
+                <br>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Cotraseña" name="Upassword" [(ngModel)]="Upassword">
+                <br>
+              </div>
+              <br>
+              <!-- Boton para registro-->
+              <button type="submit" class="btn btn-success btn-lg btn-block" (click)="registrar()">Registrar</button>
+              <br>
+              <!-- Navegacion a logeo-->
+              <a class="link" routerLink="/logeo">Ya tengo cuenta</a>
+        </fieldset>
+    </form>
+  </div>
+  

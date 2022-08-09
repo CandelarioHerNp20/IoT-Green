@@ -1,0 +1,59 @@
+<!-- Formulario para activacion de electrovalbula-->
+<div>
+  <div class="container row">
+    <div class="col">
+      <div class="container card">
+        <div class="card-content">
+          <h3>Switch de electrovalbula</h3>
+          <form #electroForm="ngForm" class="row g-3">
+            <input type="hidden" class="input" value="-N8--7MFJixccOpolDx9" name="$key">
+            <br>
+            <label for="Tiempo">Electrovalbula</label>
+
+            <select class="form-select" aria-label="Default select example" class="form-control" id="Estado" required
+              [(ngModel)]="estado" name="estado">
+              <option value="ON">Encender</option>
+            </select>
+            <div>
+              <label for="Tiempo">Tiempo de riego (minutos): </label>
+              <label for="Estado">{{tiempo}}</label>
+              <input type="number"  class="form-control" name="tiempo" class="form-control" id="tiempo" required
+              [(ngModel)]="tiempo" name="tiempo" max="10" min="1">
+            </div>
+            <div class="col-auto">
+              <label for="Estado">Hora de dia</label>
+              <input type="time" class="form-control" name="dia" class="form-control" id="dia" required
+                [(ngModel)]="dia" name="dia">
+            </div>
+            <div class="col-auto">
+              <label for="Estado">Hora de noche</label>
+              <input type="time" class="form-control" name="noche" class="form-control" id="noche" required
+                [(ngModel)]="noche" name="noche">
+            </div>
+            <!--Boton para envio de los datos-->
+            <button type="submit" class="btn btn-primary" (click)="guardar(tiempo, dia, noche, estado)">Guardar</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <br>
+    
+    <div class="col container">
+      <div>
+        <div class="col card">
+          <div class="row">
+            <!--Listado de los datos de la electrivalbula-->
+            <ul class="list-group" *ngFor="let lista of electro">
+              <li class="list-group-item disabled">Estado de Electrovalbula</li>
+              <li class="list-group-item">Estado: {{lista.Estado}}</li>
+              <li class="list-group-item">Minutos: {{lista.Tiempo}}</li>
+              <li class="list-group-item">AM: {{lista.HoraDia}}</li>
+              <li class="list-group-item">PM: {{lista.HoraNoche}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<!-- Lista del estado de la electrovalbula-->
+<div class="card">
+  <div class="row">
+    <ul class="list-group" *ngFor="let lista of electro">
+      <!-- Impresion de los datos de la base -->
+      <li class="list-group-item disabled">Estado de Electrovalbula</li>
+      <li class="list-group-item">Estado: {{lista.Estado}}</li>
+      <li class="list-group-item">Minutos: {{lista.Tiempo}}</li>
+      <li class="list-group-item">AM: {{lista.HoraDia}}</li>
+      <li class="list-group-item">PM: {{lista.HoraNoche}}</li>
+    </ul>
+  </div>
+</div>

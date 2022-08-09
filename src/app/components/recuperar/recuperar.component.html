@@ -1,0 +1,19 @@
+<!--formulario paera recuperacion-->
+<div id="login" class="card">
+    <h2><span class="fontawesome-lock"></span>Recuperar</h2>
+    <form action="javascript:void(0);" method="POST">
+        <fieldset>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Coreo</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="coloca tu correo" name="Correo" [(ngModel)]="Correo" required>
+                <br>
+              </div>
+              <br>
+              <!--Boton para recuperacion-->
+              <button type="submit" class="btn btn-success btn-lg btn-block" (click)="recuperarPass()">Recuperar</button>
+              <br>
+              <!--Boton para navegacion a logeo-->
+              <a class="link" routerLink="/logeo">Regresar a login</a>
+        </fieldset>
+    </form>
+  </div>

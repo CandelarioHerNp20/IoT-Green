@@ -1,0 +1,13 @@
+<!-- lista del estado de la electrovalbula-->
+<div class="card">
+    <div class="row">
+      <ul class="list-group"  *ngFor="let pls of placas">
+        <li class="list-group-item disabled">Estado de Electrovalbula</li>
+        <!-- Impresion  de los datos-->
+        <li class="list-group-item"><img src="./assets/Humidity.svg" /> Humedad actual: {{((100/4090)*pls.Humedad).toFixed(1)}} %  </li>
+        <li class="list-group-item"><img src="./assets/Calendar.svg" /> Fecha del registro:  {{pls.Fecha}}</li>
+        <li class="list-group-item"><img src="./assets/clock.svg" /> Hora del registro: {{pls.Hora}} </li>
+        <li class="list-group-item">Los datos de los sensores son enviados cada 30 minutos por lo que puede haber una ligera variación con la Temperatura y humedad actual.</li>
+      </ul>
+    </div>
+  </div>

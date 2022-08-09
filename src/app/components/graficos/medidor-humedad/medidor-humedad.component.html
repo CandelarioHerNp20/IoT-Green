@@ -1,0 +1,45 @@
+<!--Graficos para la muestra de la temperatura y humedad actual-->
+<div class="row" *ngFor="let pls of placas">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Temperatura</h5>
+        <div class="container">
+          <div class="de">
+            <div class="den">
+              <div class="dene">
+                <div class="denem">
+                  <!--muestra de temperatura-->
+                  <div class="deneme">{{pls.Temperatura}}
+                    <strong>C°</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Humedad</h5>
+        <div class="container">
+          <div class="de">
+            <div class="den">
+              <div class="dene">
+                <div class="denem">
+                  <!-- Muestra de humeda con redonde a 1 decimal-->
+                  <div class="deneme">{{((100/4090)*pls.Humedad).toFixed(1)}}
+                    <strong>%</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

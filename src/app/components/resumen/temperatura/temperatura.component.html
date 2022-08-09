@@ -1,0 +1,5 @@
+<!-- Grafic de temperatura utilizandi High charts-->
+<highcharts-chart *ngIf="chartOptions" [Highcharts]="Highcharts" [options]="chartOptions"
+[callbackFunction]="chartCallback" [(update)]="updateFlag" [oneToOne]="oneToOneFlag"
+style="width: 100%; height: 250px;">
+</highcharts-chart>

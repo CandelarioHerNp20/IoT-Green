@@ -1,0 +1,134 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <img src="./assets/Logo.svg" width="45px" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/">Inicio</a>
+          </li>
+          <!--navegacion a lista de registros-->
+          <li class="nav-item" *ngIf="logeado === 'con_acceso'">
+            <a class="nav-link active" aria-current="page" routerLink="/lista">Lista</a>
+          </li>
+          <!--navegacion a control-->
+          <li class="nav-item" *ngIf="logeado === 'con_acceso'">
+            <a class="nav-link active" aria-current="page" routerLink="/electro">Control</a>
+          </li>
+
+          <!--Navegacion a graficos-->
+          <li class="nav-item" *ngIf="logeado === 'con_acceso'">
+            <a class="nav-link active" aria-current="page" routerLink="/graficos">Graficos</a>
+          </li>
+
+          <!--navegacion a resumen-->
+          <li class="nav-item" *ngIf="logeado === 'con_acceso'">
+            <a class="nav-link active" aria-current="page" routerLink="/resumen">Resumen</a>
+          </li>
+
+        </ul>
+        <!-- navegacion a logeo-->
+        <div class="d-flex" class="nav-link active" routerLink="/logeo" *ngIf="logeado === 'sin_acceso'">
+          Acceder
+        </div>
+        <!--Cierre de sesion-->
+        <div class="d-flex" (click)="cerrar()" *ngIf="logeado === 'con_acceso'">
+          Salir
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!--navegacion entre directorios desde la pagina principal sin recargar-->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="container">
+</div>
+<footer class="page-footer font-small blue pt-4">
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+        <!-- Content -->
+        <h5 class="text-uppercase">Acerca del proyecto</h5>
+        <ul class="list-unstyled">
+          <li>
+            <img src="./assets/telephone.svg">
+            <a href="">Tel UAA +52 226 316 1909</a>
+          </li>
+          <li>
+            <img src="./assets/telephone.svg">
+            <a href="">Tel UTGZ +52 000 000 0000</a>
+          </li>
+          <li>
+            <img src="./assets/whatsapp.svg">
+            <a href="">Whatsapp</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+      <hr class="clearfix w-100 d-md-none pb-3">
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+        <!-- Links -->
+        <h5 class="text-uppercase">Redes</h5>
+        <ul class="list-unstyled">
+          <li>
+            <img src="./assets/facebook.svg">
+            <a target="blank" href="https://www.facebook.com/utgzamora">Facebook</a>
+          </li>
+          <li>
+            <img src="./assets/twitter.svg">
+            <a target="blank" href="https://twitter.com/utgzamora">Twitter</a>
+          </li>
+          <li>
+            <img src="./assets/mail.svg">
+            <a href="">Gmail</a>
+          </li>
+          <li>
+            <img src="./assets/patch-check-fill.svg">
+            <a target="blank" href="https://www.fichas.utgz.edu.mx/">Fichas UTGZ</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Grid column -->
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Otros</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <img src="./assets/github.svg" />
+            <a target="blank" href="https://github.com/CandelarioHerNp20">Github</a>
+          </li>
+          <li>
+            <img src="./assets/telephone.svg" />
+            <a href="">Tel UTGZ +52 000 000 0000</a>
+          </li>
+          <li>
+            <img src="./assets/whatsapp.svg" />
+            <a href="">Whatsapp</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2022 Copyright:
+    <a href=""> UTGZ</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

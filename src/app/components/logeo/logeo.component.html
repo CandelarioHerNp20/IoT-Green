@@ -1,0 +1,30 @@
+<!-- Formulario para logeo de usuarios-->
+<div id="login" class="card">
+    <h2><span class="fontawesome-lock"></span>Acceder</h2>
+    <form action="javascript:void(0);" method="POST">
+        <fieldset>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Coreo</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="usuario@gmail.com" name="Correo" [(ngModel)]="Correo">
+                <br>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Cotraseña" name="Upassword" [(ngModel)]="Upassword" >
+                <br>
+              </div>
+              <br>
+              <!-- Boton para acceso de los asuarios-->
+              <button type="submit" class="btn btn-success btn-lg btn-block" (click)="acceder()">Acceder</button>
+              <br>
+              <div class="row">
+                <!-- Naegacion a registro de usuarios-->
+                <a class="link" routerLink="/registro">Registrar cuenta</a>
+                <!-- Nevagacion a repuperacion de contraseña-->
+                <a class="link" routerLink="/recuperar"> Olvide mi Contraseña</a>
+              </div>
+              
+        </fieldset>
+    </form>
+  </div>
+  
